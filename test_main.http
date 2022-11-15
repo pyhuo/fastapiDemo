@@ -9,3 +9,33 @@ GET http://127.0.0.1:8000/hello/User
 Accept: application/json
 
 ###
+
+
+
+## New in HTTP Client
+
+## HTTP Client Now Supports WebSocket
+
+###
+# @name WebSocket Request
+WEBSOCKET ws://{{$exampleServer}}/ws
+Content-Type: application/json
+
+===
+{
+  "message": "Hello, server!",
+  "repeat": 3
+}
+=== wait-for-server
+=== wait-for-server
+{
+  "message": "We send this message...",
+  "repeat": 0
+}
+===
+{
+  "message": "And this message together",
+  "repeat": 1
+}
+
+###
